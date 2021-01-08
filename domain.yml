@@ -4,14 +4,22 @@ session_config:
 intents:
 - greet
 - goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
+- thanks
+- about_me
+- about_Amar_iSchool
+- type_of_institution
+- about_service
+- kind_of_organization
+- about_website
+- mood_goodbye
 - bot_challenge
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hello
+  utter_goodbye:
+  - text: Bye
+  utter_thanks:
+  - text: My pleasure
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -19,7 +27,15 @@ responses:
   - text: Did that help you?
   utter_happy:
   - text: Great, carry on!
-  utter_goodbye:
-  - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+actions:
+- utter_greet
+- utter_goodbye
+- utter_thanks
+- action_about_me
+- action_about_Amar_iSchool
+- action_type_of_institution
+- action_about_service
+- action_kind_of_organization
+- action_about_website
